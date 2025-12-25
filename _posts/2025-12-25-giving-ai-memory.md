@@ -5,13 +5,9 @@ categories: [GraphRAG, Research, AI, Neo4j]
 tags: [graphrag, mcp, neo4j, claude-code, research]
 author: Michael Kenteris
 excerpt: "How I gave Claude Code a permanent, structured memory using GraphRAG and the Model Context Protocol - moving from searching for information to synthesizing insights."
-header:
-  overlay_color: "#5e616c"
-  overlay_image: /assets/images/ScholarGraph_LinkedIn.png
-  caption: "ScholarGraph: A Research Knowledge Graph with GraphRAG"
+---
 
 ![ScholarGraph: A Research Knowledge Graph with GraphRAG](/assets/images/ScholarGraph_LinkedIn.png)
-
 
 ## The Problem: AI Has No Long-Term Memory
 
@@ -151,8 +147,7 @@ It is the ultimate productivity gift—the ability to actually use my research a
 ## Links
 
 - **Full LinkedIn Article:** [A Researcher's Christmas Miracle: The Gift of GraphRAG Memory](https://www.linkedin.com/pulse/researchers-christmas-miracle-gift-graphrag-memory-michael-kenteris-ped7f/)
-- **Technical Documentation:** [Z_AI_GLM_INTEGRATION.md](/docs/Z_AI_GLM_INTEGRATION.md)
-- **ScholarGraph Repository:** [github.com/mkenteris01/ScholarGraph](https://github.com/mkenteris01/ScholarGraph)
+- **ScholarGraph on GitHub:** [github.com/mkenteris01-code/ScholarGraph](https://github.com/mkenteris01-code/ScholarGraph)
 - **MCP Protocol:** [github.com/anthropics/mcp](https://github.com/anthropics/mcp)
 
 ---
