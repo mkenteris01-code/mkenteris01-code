@@ -1,0 +1,9 @@
+# _config.yml
+# Script Name: Jekyll Configuration
+# Purpose: Define the visual theme and metadata for the GitHub Pages site.
+# Date: Thursday, December 25, 2025, 10:45 AM (Athens Time)
+# Note: Neo4j and Google API are secret keys.
+
+theme: jekyll-theme-cayman
+title: My Research Portfolio
+description: Exploring AI, LLMs, and Knowledge Graphs.
