@@ -4,7 +4,7 @@
 
 url: "https://mkenteris01-code.github.io"
 baseurl: ""
-theme: jekyll-theme-cayman
+theme: minima
 title: Michael Kenteris - Code & Research
 description: Postdoctoral Researcher at the University of the Aegean. Exploring AI, LLMs, Knowledge Graphs, and GraphRAG.
 
@@ -15,6 +15,11 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Minima theme navigation (header links)
+header_pages:
+  - about.md
+  - ScholarGraph.md
 
 # Exclude from processing
 exclude:
@@ -34,14 +39,3 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
-
-# Navigation menu
-navigation:
-  - title: Home
-    url: /
-  - title: Blog
-    url: /blog/
-  - title: ScholarGraph
-    url: /ScholarGraph/
-  - title: GitHub
-    url: https://github.com/mkenteris01-code

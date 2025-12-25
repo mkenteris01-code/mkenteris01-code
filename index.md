@@ -1,5 +1,5 @@
 ---
-title: "Michael Kenteris - Code & Research"
+title: "Home"
 ---
 
 # Welcome
