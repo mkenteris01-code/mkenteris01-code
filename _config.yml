@@ -4,8 +4,8 @@
 # Date: Thursday, December 25, 2025, 11:56 AM (Athens Time)
 # Note: Neo4j and Google API are secret keys.
 
-baseurl: "" 
 url: "https://mkenteris01-code.github.io"
+baseurl: "" # Keep as "" ONLY if the repo name matches the URL exactly.
 theme: jekyll-theme-cayman
 title: My Research Portfolio
 description: Exploring AI, LLMs, and Knowledge Graphs.
