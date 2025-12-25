@@ -1,5 +1,6 @@
 ---
-layout: home
+layout: default
+title: My Research Portfolio
 ---
 
 # Federated Learning & Knowledge Graphs Research
