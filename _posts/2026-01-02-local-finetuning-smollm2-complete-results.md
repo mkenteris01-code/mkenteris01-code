@@ -9,8 +9,6 @@ excerpt: "Over the past month, I've built a system that validates AI outputs aga
 
 # Local Fine-Tuning with SmolLM2 — Complete Results & Lessons Learned
 
-## Small but Mighty: How I Built an AI That Actually Understands CEFR Levels
-
 **The problem:** Teachers worldwide use ChatGPT for lesson planning—but it generates content that sounds polished yet is pedagogically wrong. A C1 activity marked for advanced learners contains A2 vocabulary. Grammar exercises ignore the proficiency framework that defines what students *should* know at each level. And there's no way to see *why* the AI made these choices.
 
 **The solution:** Over the past month, I've built a system that validates AI outputs against a pedagogical knowledge graph before they reach teachers. Here's what worked, what failed spectacularly, and why I'm moving toward federated learning that respects privacy while improving collectively.
