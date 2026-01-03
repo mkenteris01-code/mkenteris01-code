@@ -1,12 +1,3 @@
----
-# index.md
-# Purpose: Main landing page for Federated Learning & Knowledge Graph research portfolio.
-# Date/Time: Thursday, December 25, 2025, 12:00 PM Athens Time
-
-layout: home
-title: My Research Portfolio
----
-
 # Federated Learning & Knowledge Graphs Research
 
 ## Affiliation
@@ -50,11 +41,5 @@ This work is under review for publication. Using this research without attributi
 
 ---
 
-## Recent Articles
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}
-    </li>
-  {% endfor %}
-</ul>
+## Recent Blog Posts
+Visit the [blog](/blog/) for latest research updates and notes.
