@@ -9,8 +9,35 @@ title: My Research Portfolio
 
 # Federated Learning & Knowledge Graphs Research
 
+## Affiliation
+**Intelligent Systems Laboratory (i-lab)**
+**Semantic Web of Things (SWoT) Group**
+Department of Information & Communication Systems Engineering
+University of the Aegean
+
+https://i-lab.aegean.gr/swot/
+
+---
+
 ## Description
-This repository contains the codebase for post-doc research focusing on the intersection of **Federated Learning (FL)** and **Knowledge Graphs (KG)**. 
+This repository contains the codebase for post-doc research focusing on the intersection of **Federated Learning (FL)** and **Knowledge Graphs (KG)**.
+
+---
+
+## LICENSE & NOTICE
+
+⚠️ **Pre-publication Code** - This repository contains unpublished research.
+
+**Copyright © 2025 University of the Aegean. All Rights Reserved.**
+
+Do NOT use, copy, modify, distribute, or cite without explicit permission from the author.
+
+**Academic Integrity Notice:**
+This work is under review for publication. Using this research without attribution or prior consent constitutes academic misconduct.
+
+**For permissions, contact:** mkenteris@aegean.gr
+
+---
 
 ## Tech Stack
 * **Python**: Core logic for FL algorithms.
