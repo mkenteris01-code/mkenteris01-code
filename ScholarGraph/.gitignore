@@ -45,3 +45,5 @@ test_*.json
 
 # Jupyter notebooks
 .ipynb_checkpoints/
+
+docs/
