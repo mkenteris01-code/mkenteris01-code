@@ -43,7 +43,7 @@ async def list_tools() -> list[Tool]:
         Tool(
             name="search_papers",
             description="Search research papers using semantic, keyword, or hybrid search. "
-                       "Supports filtering by scoping review corpus.",
+                       "Supports filtering by scoping review corpus and by recency (days_ago).",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -65,6 +65,11 @@ async def list_tools() -> list[Tool]:
                     "filter_corpus": {
                         "type": "boolean",
                         "description": "If true, search only corpus papers; if false, exclude corpus",
+                        "default": None
+                    },
+                    "days_ago": {
+                        "type": "integer",
+                        "description": "Only return documents from the last N days (default: all time). Use 7-30 for recent info.",
                         "default": None
                     }
                 },
@@ -128,7 +133,8 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent]:
                 query=arguments["query"],
                 mode=arguments.get("mode", "hybrid"),
                 k=arguments.get("k", 5),
-                filter_corpus=arguments.get("filter_corpus")
+                filter_corpus=arguments.get("filter_corpus"),
+                days_ago=arguments.get("days_ago")
             )
         elif name == "get_paper_details":
             result = await tools.get_paper_details(

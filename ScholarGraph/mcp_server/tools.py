@@ -24,7 +24,8 @@ class ScholarGraphTools:
         query: str,
         mode: str = "hybrid",
         k: int = 5,
-        filter_corpus: Optional[bool] = None
+        filter_corpus: Optional[bool] = None,
+        days_ago: Optional[int] = None
     ) -> Dict[str, Any]:
         """
         Search research papers in ScholarGraph.
@@ -34,6 +35,7 @@ class ScholarGraphTools:
             mode: Search mode - "semantic", "keyword", or "hybrid"
             k: Number of results to return
             filter_corpus: If True, only search scoping review corpus; if False, exclude corpus
+            days_ago: If specified, only return documents from last N days (default: all time)
 
         Returns:
             Dict with search results and metadata
@@ -45,6 +47,11 @@ class ScholarGraphTools:
                 filter_clause = "AND d.scoping_review_included = true"
             elif filter_corpus is False:
                 filter_clause = "AND (d.scoping_review_included IS NULL OR d.scoping_review_included = false)"
+
+            # Date filter for recency
+            date_filter_clause = ""
+            if days_ago is not None:
+                date_filter_clause = f"AND date(datetime({{d.ingestion_date}})) > date() - duration('P{days_ago}D')"
 
             if mode == "semantic":
                 gpu_client = GPURigClient()
@@ -60,17 +67,17 @@ class ScholarGraphTools:
                 searcher = HybridSearch(self.neo4j_client, generator)
                 results = searcher.search_chunks(query, k=k)
 
-            # Apply corpus filter if needed
-            if filter_clause:
+            # Apply corpus and date filters if needed
+            if filter_clause or date_filter_clause:
                 filtered_results = []
                 for result in results:
                     doc_id = result.get('document_id')
                     if doc_id:
-                        # Check if document matches filter
+                        # Check if document matches filters
                         check_query = f"""
                         MATCH (d:Document {{document_id: $doc_id}})
-                        WHERE 1=1 {filter_clause}
-                        RETURN d.document_id as id
+                        WHERE 1=1 {filter_clause} {date_filter_clause}
+                        RETURN d.document_id as id, d.title as title, d.ingestion_date as date
                         """
                         match = self.neo4j_client.execute_query(
                             check_query,
